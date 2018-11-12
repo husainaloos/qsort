@@ -9,5 +9,5 @@ require (
 	golang.org/x/image v0.0.0-20181109232246-249dc8530c0e // indirect
 	golang.org/x/tools v0.0.0-20181111003725-6d71ab8aade0 // indirect
 	gonum.org/v1/gonum v0.0.0-20181107204152-48288cca5b5e // indirect
-	gonum.org/v1/plot v0.0.0-20181106102004-0582252c54f6 // indirect
+	gonum.org/v1/plot v0.0.0-20181106102004-0582252c54f6
 )

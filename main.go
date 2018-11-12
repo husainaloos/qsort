@@ -2,17 +2,36 @@ package main
 
 import (
 	"fmt"
+	_ "gonum.org/v1/plot"
+	_ "gonum.org/v1/plot/plotter"
 	"math/rand"
 	"time"
 )
 
+type coordinate struct {
+	x, y float64
+}
+
+type coordinates []coordinate
+
+func (c coordinates) Len() int {
+	return len(c)
+}
+
+func (c coordinates) XY(i int) (x, y float64) {
+	return c[i].x, c[i].y
+}
+
 func main() {
 	maxSize := 10
+
 	for size := 1; size <= maxSize; size++ {
 		arr := generateRandomArray(size)
 		scheme := LomutoScheme{}
+		t := time.Now()
 		scheme.Sort(arr)
-		fmt.Println(arr)
+		delta := time.Since(t)
+		fmt.Println(delta)
 	}
 
 }
