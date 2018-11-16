@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	_ "gonum.org/v1/plot"
-	_ "gonum.org/v1/plot/plotter"
 	"math/rand"
 	"time"
 )
