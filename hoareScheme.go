@@ -9,19 +9,21 @@ func (scheme *HoareScheme) Sort(arr []int) {
 func (scheme *HoareScheme) qsort(arr []int, low, high int) {
 	if low < high {
 		p := scheme.partition(arr, low, high)
-		scheme.qsort(arr, low, p-1)
+		scheme.qsort(arr, low, p)
 		scheme.qsort(arr, p+1, high)
 	}
 }
 
 func (scheme *HoareScheme) partition(arr []int, low, high int) int {
 	pivot := arr[low]
-	i := low
-	j := high
+	i := low - 1
+	j := high + 1
 	for {
+		i++
 		for arr[i] < pivot {
 			i++
 		}
+		j--
 		for arr[j] > pivot {
 			j--
 		}
